@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="com.github.trickster88.xjcplugins"
+           xmlns:dto="com.github.trickster88.xjcplugins"
+           elementFormDefault="qualified">
+
+    <xs:element name="document">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="from" type="xs:string"/>
+                <xs:element name="to" type="xs:string"/>
+                <xs:element name="body" type="xs:string"/>
+                <xs:element name="anonymousByteElemByDigits">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                            <xs:totalDigits value="2"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="byteElemByDigits" type="dto:byteByDigits" />
+            </xs:sequence>
+
+            <xs:attribute name="floatNum" type="xs:float" use="required"/>
+            <xs:attribute name="doubleNum" type="xs:double"/>
+            <xs:attribute name="decimalNum" type="xs:decimal"/>
+
+            <xs:attribute name="byteNumByDigits">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:totalDigits value="2"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="shortNumByDigits" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:totalDigits value="4"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="intNumByDigits">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:totalDigits value="9"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="longNumByDigits" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:totalDigits value="18"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="bigIntegerNumByDigits">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:totalDigits value="19"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+
+            <xs:attribute name="byteNumByZeroInclusiveRange" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="0"/>
+                        <xs:maxInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="byteNumByZeroExclusiveRange">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minExclusive value="-1"/>
+                        <xs:maxExclusive value="1"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+
+            <xs:attribute name="byteNumByInclusiveRange">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="-128"/>
+                        <xs:maxInclusive value="127"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="byteNumByExclusiveRange" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minExclusive value="-129"/>
+                        <xs:maxExclusive value="128"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+
+            <xs:attribute name="shortNumByInclusiveRange" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="-32768"/>
+                        <xs:maxInclusive value="32767"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="shortNumByExclusiveRange">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minExclusive value="-32769"/>
+                        <xs:maxExclusive value="32768"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+
+            <xs:attribute name="intNumByInclusiveRange">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="-2147483648"/>
+                        <xs:maxInclusive value="2147483647"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="intNumByExclusiveRange" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minExclusive value="-2147483649"/>
+                        <xs:maxExclusive value="2147483648"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+
+            <xs:attribute name="longNumByInclusiveRange" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="-9223372036854775808"/>
+                        <xs:maxInclusive value="9223372036854775807"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="longNumByExclusiveRange">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minExclusive value="-9223372036854775809"/>
+                        <xs:maxExclusive value="9223372036854775808"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="byteByDigits">
+        <xs:restriction base="xs:int">
+            <xs:totalDigits value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
