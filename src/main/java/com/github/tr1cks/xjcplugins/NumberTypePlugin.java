@@ -1,4 +1,4 @@
-package com.github.trickster88.xjcplugins;
+package com.github.tr1cks.xjcplugins;
 
 
 import com.sun.codemodel.*;
@@ -150,6 +150,7 @@ public class NumberTypePlugin extends Plugin {
         @Nullable BigInteger minInclusive = fetchFacetIntValue(simpleType, FACET_MININCLUSIVE);
         @Nullable BigInteger minExclusive = fetchFacetIntValue(simpleType, FACET_MINEXCLUSIVE);
 
+        //TODO: bug? Maybe expected getMinInclusive?
         return getMaxInclusive(minInclusive != null ? minInclusive.negate() : null,
                                minExclusive != null ? minExclusive.negate().subtract(ONE) : null);
     }

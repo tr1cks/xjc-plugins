@@ -5,5 +5,5 @@
 // Generated on: 2014.08.13 at 06:28:53 PM YEKT 
 //
 
-@javax.xml.bind.annotation.XmlSchema(namespace = "com.github.trickster88.xjcplugins", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
-package com.github.trickster88.xjcplugins;
+@javax.xml.bind.annotation.XmlSchema(namespace = "com.github.tr1cks.xjcplugins", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
+package com.github.tr1cks.xjcplugins;

@@ -6,7 +6,7 @@
 //
 
 
-package com.github.trickster88.xjcplugins;
+package com.github.tr1cks.xjcplugins;
 
 import java.io.Serializable;
 import java.math.BigDecimal;

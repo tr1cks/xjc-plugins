@@ -1,4 +1,4 @@
-package com.github.trickster88.xjcplugins;
+package com.github.tr1cks.xjcplugins;
 
 
 import com.sun.codemodel.*;

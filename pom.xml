@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.trickster88.xjc-plugins</groupId>
+    <groupId>com.github.tr1cks.xjc-plugins</groupId>
     <artifactId>xjc-plugins</artifactId>
     <version>0.1</version>
 
@@ -52,6 +52,7 @@
             </plugin>
 
             <!-- For tests -->
+<!--
             <plugin>
                 <groupId>org.jvnet.jaxb2.maven2</groupId>
                 <artifactId>maven-jaxb2-plugin</artifactId>
@@ -67,7 +68,7 @@
                 <configuration>
                     <schemaDirectory>${project.basedir}/src/test/resources</schemaDirectory>
                     <generateDirectory>${project.basedir}/src/test/java</generateDirectory>
-                    <generatePackage>com.github.trickster88.xjcplugins</generatePackage>
+                    <generatePackage>com.github.tr1cks.xjcplugins</generatePackage>
                     <extension>true</extension>
                     <episode>false</episode>
                     <forceRegenerate>true</forceRegenerate>
@@ -81,7 +82,7 @@
                     </args>
                     <plugins>
                         <plugin>
-                            <groupId>com.github.tricks-ter</groupId>
+                            <groupId>com.github.tr1cks</groupId>
                             <artifactId>xjc-plugins</artifactId>
                             <version>0.1-SNAPSHOT</version>
                         </plugin>
@@ -89,12 +90,13 @@
                 </configuration>
                 <dependencies>
                     <dependency>
-                        <groupId>com.github.tricks-ter</groupId>
+                        <groupId>com.github.tr1cks</groupId>
                         <artifactId>xjc-plugins</artifactId>
                         <version>0.1-SNAPSHOT</version>
                     </dependency>
                 </dependencies>
             </plugin>
+-->
         </plugins>
     </build>
 

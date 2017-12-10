@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="com.github.trickster88.xjcplugins"
-           xmlns:dto="com.github.trickster88.xjcplugins"
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="com.github.tr1cks.xjcplugins"
+           xmlns:dto="com.github.tr1cks.xjcplugins"
            elementFormDefault="qualified">
 
     <xs:element name="document">
